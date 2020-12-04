@@ -1,23 +1,19 @@
 import logo from './logo.svg';
+import {useState} from 'React';
 import './App.css';
 
 function App() {
+
+  const [audioData, setAudioData] = useState([]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className = 'prompt'>
+        <p>note prompts go here</p>
+      </div>
+      <div className = 'ui'>
+        <button onClick = {() => setAudioData(1)}>start record</button>
+      </div>
     </div>
   );
 }
